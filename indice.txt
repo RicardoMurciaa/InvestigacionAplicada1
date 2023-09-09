@@ -1,3 +1,62 @@
 Capitulo 1: Introduccion a Git
-Capitulo 2: Flujo de trabajo basico 
-Capitulo 3: Repositorios remotos
+
+Es considerado como un sistema de salvaguarda incremental, debido a un 
+sistema de gestion de versiones, es posible recuperar todas las versiones 
+anteriores. Git permite llevar en paralelo varias versiones del mismo 
+software. Sirve como documentacion completa, cada nueva modificacion del 
+codigo ira acompañado de un mensaje. es una herramienta indispensable para 
+desarrolladores
+
+Capitulo 2: Flujo de trabajo basicos
+
+Ramas de Largo Recorrido. Por la sencilles de la fusion a tres bandas de GIT,
+el fusionar u
+na rama a otra varias veces a lo largo del tiempo es fácil de 
+hacer.
+
+Flujos de trabajo centralizados, flujos de trabajo Administrador-Integracion
+ y flujo de trabajo dictador-tenientes
+
+Capitulo 3: Gestor de ramas
+
+1. Trabajas en un sitio web.
+
+2. Creas una rama para un nuevo tema sobre el que quieres trabajar.
+
+3. Realizas algo de trabajo en esa rama.
+
+En tal caso un problema crítico se presenta a resolver, se siguen los pasos:
+
+1. Vuelves a la rama de producción original.
+
+2. Creas una nueva rama para el problema crítico y lo resuelves trabajando en ella.
+
+3. Tras las pertinentes pruebas, fusionas (merge) esa rama y la envías (push) a 
+la rama de producción.
+
+4. Vuelves a la rama del tema en que andabas antes de la llamada y continúas tu 
+trabajo.
+
+Capitulo 4: Repositorios remotos
+
+Un repositorio local puede vincularse con varios repositorios remotos.
+Para tener la lista de los repositorios remotos vinculados con el repositorio 
+local, se debe utilizar el comando siguiente: 
+
+git remote 
+
+Durante el uso del comando git clone, se introduce un repositorio remoto 
+llamado origin en el archivo .git/config. A continuación mostramos un extracto 
+de la parte que contiene los repositorios remotos: 
+
+[remote "origin"] 
+   url = /Volumes/JedemaKey/Libro/Git/Repo/07/test_echange/remote 
+   fetch = +refs/heads/*:refs/remotes/origin/* 
+
+En este ejemplo, la primera línea define el nombre del repositorio remoto 
+que utilizará Git.
+
+La línea siguiente define la URL para comunicarse con el repositorio remoto.
+
+La siguiente línea permite especificar el lugar donde se almacenan las ramas 
+locales y las ramas remotas seguidas.
